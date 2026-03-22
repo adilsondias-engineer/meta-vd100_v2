@@ -1,0 +1,67 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Mar 22 14:05:59 2026
+| Host         : Mercury running 64-bit major release  (build 9200)
+| Command      : report_methodology -file route_report_methodology_0.rpt -pb route_report_methodology_0.pb -rpx route_report_methodology_0.rpx
+| Design       : led
+| Device       : xcve2302-sfva784-1LP-e-S
+| Speed File   : -1LP
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 5
++-----------+----------+--------------------------------------------------------+--------+
+| Rule      | Severity | Description                                            | Checks |
++-----------+----------+--------------------------------------------------------+--------+
+| AVAL-344  | Warning  | Design_needs_USER_RAM_AVERAGE_ACTIVITY_set             | 1      |
+| TIMING-18 | Warning  | Missing input or output delay                          | 2      |
+| XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 1      |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1      |
++-----------+----------+--------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+AVAL-344#1 Warning
+Design_needs_USER_RAM_AVERAGE_ACTIVITY_set  
+The design property USER_RAM_AVERAGE_ACTIVITY on the top-level current_design object is unset (or set to -1).  The estimated RAM_AVERAGE_ACTIVITY used for the design is 0 and assumes a worst-case switching scenario for the URAM and BRAM.  RAM activity directly impacts clock uncertainty and the RAM_AVERAGE_ACTIVITY property may not be accurate for designs that are not final.  It is recommended that the USER_RAM_AVERAGE_ACTIVITY property be specified.  Please refer to the Versal ACAP Clocking Resources Architecture Manual and the Versal ACAP Hardware, IP, and Platform Development Methodology User Guide for more information on specifying the USER_RAM_AVERAGE_ACTIVITY.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on rst_n relative to the rising and/or falling clock edge(s) of clk_pl_0.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on led relative to the rising and/or falling clock edge(s) of clk_pl_0.
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 5.000 -name sys_clk_p -waveform {0.000 2.500} [get_ports sys_clk_p] (Source: J:/work/projects/versal/ledblink/hardware/ledblink.srcs/constrs_1/new/vd100.xdc (Line: 15))
+Previous: create_clock -period 5.000 [get_ports sys_clk_p] (Source: j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ip/design_1_axi_noc_0_1/bd_0/ip/ip_7/hdl/par/bd_4b24_MC0_ddrc_0_ip.xdc (Line: 3))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 5.000 -name sys_clk_p -waveform {0.000 2.500} [get_ports sys_clk_p] (Source: J:/work/projects/versal/ledblink/hardware/ledblink.srcs/constrs_1/new/vd100.xdc (Line: 15))
+Previous: create_clock -period 5.000 [get_ports sys_clk_p] (Source: j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ip/design_1_axi_noc_0_1/bd_0/ip/ip_7/hdl/par/bd_4b24_MC0_ddrc_0_ip.xdc (Line: 3))
+Related violations: <none>
+
+

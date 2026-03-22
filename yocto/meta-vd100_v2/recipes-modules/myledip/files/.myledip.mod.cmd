@@ -1,0 +1,1 @@
+savedcmd_/work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/myledip.mod := printf '%s\n'   myledip.o | awk '!x[$$0]++ { print("/work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/"$$0) }' > /work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/myledip.mod

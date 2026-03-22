@@ -1,0 +1,1 @@
+savedcmd_/work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/Module.symvers :=  scripts/mod/modpost -M   -E     -o /work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/Module.symvers -T /work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/modules.order -i Module.symvers -e 

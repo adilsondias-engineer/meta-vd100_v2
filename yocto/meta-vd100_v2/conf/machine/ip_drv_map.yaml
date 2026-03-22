@@ -1,0 +1,312 @@
+MyLEDIP_0:
+- MyLEDIP
+- None
+versal_cips_0_pspmc_0_psv_adma_0:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_1:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_2:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_3:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_4:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_5:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_6:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_adma_7:
+- psv_adma
+- zdma
+versal_cips_0_pspmc_0_psv_crf_0:
+- psv_crf
+- None
+versal_cips_0_pspmc_0_psv_crl_0:
+- psv_crl
+- None
+versal_cips_0_pspmc_0_psv_crp_0:
+- psv_crp
+- None
+versal_cips_0_pspmc_0_psv_ethernet_0:
+- psv_ethernet
+- emacps
+versal_cips_0_pspmc_0_psv_fpd_afi_0:
+- psv_fpd_afi
+- None
+versal_cips_0_pspmc_0_psv_fpd_afi_2:
+- psv_fpd_afi
+- None
+versal_cips_0_pspmc_0_psv_fpd_cci_0:
+- psv_fpd_cci
+- None
+versal_cips_0_pspmc_0_psv_fpd_gpv_0:
+- psv_fpd_gpv
+- None
+versal_cips_0_pspmc_0_psv_fpd_maincci_0:
+- psv_fpd_maincci
+- None
+versal_cips_0_pspmc_0_psv_fpd_slave_xmpu_0:
+- psv_fpd_slave_xmpu
+- None
+versal_cips_0_pspmc_0_psv_fpd_slcr_0:
+- psv_fpd_slcr
+- None
+versal_cips_0_pspmc_0_psv_fpd_slcr_secure_0:
+- psv_fpd_slcr_secure
+- None
+versal_cips_0_pspmc_0_psv_fpd_smmu_0:
+- psv_fpd_smmu
+- None
+versal_cips_0_pspmc_0_psv_fpd_smmutcu_0:
+- psv_fpd_smmutcu
+- None
+versal_cips_0_pspmc_0_psv_gpio_2:
+- psv_gpio
+- gpiops
+versal_cips_0_pspmc_0_psv_ipi_psm:
+- psv_ipi
+- ipipsu
+versal_cips_0_pspmc_0_psv_lpd_afi_0:
+- psv_lpd_afi
+- None
+versal_cips_0_pspmc_0_psv_lpd_iou_secure_slcr_0:
+- psv_lpd_iou_secure_slcr
+- None
+versal_cips_0_pspmc_0_psv_lpd_iou_slcr_0:
+- psv_lpd_iou_slcr
+- None
+versal_cips_0_pspmc_0_psv_lpd_slcr_0:
+- psv_lpd_slcr
+- None
+versal_cips_0_pspmc_0_psv_lpd_slcr_secure_0:
+- psv_lpd_slcr_secure
+- None
+versal_cips_0_pspmc_0_psv_lpd_xppu_0:
+- psv_lpd_xppu
+- None
+versal_cips_0_pspmc_0_psv_ocm_ctrl:
+- psv_ocm
+- None
+versal_cips_0_pspmc_0_psv_ocm_xmpu_0:
+- psv_ocm_xmpu
+- None
+versal_cips_0_pspmc_0_psv_pmc_aes:
+- psv_pmc_aes
+- None
+versal_cips_0_pspmc_0_psv_pmc_analog_0:
+- psv_pmc_analog
+- None
+versal_cips_0_pspmc_0_psv_pmc_bbram_ctrl:
+- psv_pmc_bbram_ctrl
+- None
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_0:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_1:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_10:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_11:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_12:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_13:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_14:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_2:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_3:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_4:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_5:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_6:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_7:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_8:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_9:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfi_cframe_bcast:
+- psv_pmc_cfi_cframe
+- cframe
+versal_cips_0_pspmc_0_psv_pmc_cfu_apb_0:
+- psv_pmc_cfu_apb
+- cfupmc
+versal_cips_0_pspmc_0_psv_pmc_dma_0:
+- psv_pmc_dma
+- csudma
+versal_cips_0_pspmc_0_psv_pmc_dma_1:
+- psv_pmc_dma
+- csudma
+versal_cips_0_pspmc_0_psv_pmc_efuse_cache:
+- psv_pmc_efuse_cache
+- None
+versal_cips_0_pspmc_0_psv_pmc_efuse_ctrl:
+- psv_pmc_efuse_ctrl
+- None
+versal_cips_0_pspmc_0_psv_pmc_global_0:
+- psv_pmc_global
+- None
+versal_cips_0_pspmc_0_psv_pmc_iou_slcr_0:
+- psv_pmc_iou_slcr
+- None
+versal_cips_0_pspmc_0_psv_pmc_ppu1_mdm_0:
+- psv_pmc_ppu1_mdm
+- uartlite
+versal_cips_0_pspmc_0_psv_pmc_qspi_0:
+- psv_pmc_qspi
+- qspipsu
+versal_cips_0_pspmc_0_psv_pmc_ram_npi:
+- psv_pmc_ram_npi
+- None
+versal_cips_0_pspmc_0_psv_pmc_rsa:
+- psv_pmc_rsa
+- None
+versal_cips_0_pspmc_0_psv_pmc_rtc_0:
+- psv_pmc_rtc
+- rtcpsu
+versal_cips_0_pspmc_0_psv_pmc_sd_0:
+- psv_pmc_sd
+- sdps
+versal_cips_0_pspmc_0_psv_pmc_sd_1:
+- psv_pmc_sd
+- sdps
+versal_cips_0_pspmc_0_psv_pmc_sha:
+- psv_pmc_sha
+- None
+versal_cips_0_pspmc_0_psv_pmc_slave_boot:
+- psv_pmc_slave_boot
+- None
+versal_cips_0_pspmc_0_psv_pmc_slave_boot_stream:
+- psv_pmc_slave_boot_stream
+- None
+versal_cips_0_pspmc_0_psv_pmc_sysmon_0:
+- psv_pmc_sysmon
+- sysmonpsv
+versal_cips_0_pspmc_0_psv_pmc_tap:
+- psv_pmc_tap
+- None
+versal_cips_0_pspmc_0_psv_pmc_trng:
+- psv_pmc_trng
+- trngpsv
+versal_cips_0_pspmc_0_psv_pmc_xmpu_0:
+- psv_pmc_xmpu
+- None
+versal_cips_0_pspmc_0_psv_pmc_xppu_0:
+- psv_pmc_xppu
+- None
+versal_cips_0_pspmc_0_psv_pmc_xppu_npi_0:
+- psv_pmc_xppu_npi
+- None
+versal_cips_0_pspmc_0_psv_psm_global_reg:
+- psv_psm_global_reg
+- None
+versal_cips_0_pspmc_0_psv_psm_iomodule_0:
+- iomodule
+- iomodule
+versal_cips_0_pspmc_0_psv_psm_ram_data_cntlr:
+- PSM_PPU
+- None
+versal_cips_0_pspmc_0_psv_psm_ram_instr_cntlr:
+- ram_instr_cntlr
+- None
+versal_cips_0_pspmc_0_psv_psm_tmr_inject_0:
+- tmr_inject
+- tmr_inject
+versal_cips_0_pspmc_0_psv_psm_tmr_manager_0:
+- tmr_manager
+- tmr_manager
+versal_cips_0_pspmc_0_psv_r5_0_atcm_global:
+- psv_tcm_global
+- None
+versal_cips_0_pspmc_0_psv_r5_1_atcm_global:
+- psv_tcm_global
+- None
+versal_cips_0_pspmc_0_psv_r5_1_btcm_global:
+- psv_tcm_global
+- None
+versal_cips_0_pspmc_0_psv_sbsauart_0:
+- psv_sbsauart
+- uartpsv
+versal_cips_0_pspmc_0_psv_scntr_0:
+- psv_scntr
+- None
+versal_cips_0_pspmc_0_psv_scntrs_0:
+- psv_scntrs
+- None
+versal_cips_0_pspmc_0_psv_ttc_0:
+- psv_ttc
+- ttcps
+versal_cips_0_pspmc_0_psv_ttc_1:
+- psv_ttc
+- ttcps
+versal_cips_0_pspmc_0_psv_ttc_2:
+- psv_ttc
+- ttcps
+versal_cips_0_pspmc_0_psv_ttc_3:
+- psv_ttc
+- ttcps
+versal_cips_0_pspmc_0_psv_usb_0:
+- psv_usb
+- None
+versal_cips_0_pspmc_0_psv_usb_xhci_0:
+- psv_usb_xhci
+- usbpsu
+versal_cips_0_pspmc_0_psv_xram_atm:
+- psv_xram_atm
+- None
+versal_cips_0_pspmc_0_psv_xram_ctrl_1:
+- psv_xram_ctrl
+- None
+versal_cips_0_pspmc_0_psv_xram_ctrl_2:
+- psv_xram_ctrl
+- None
+versal_cips_0_pspmc_0_psv_xram_ctrl_3:
+- psv_xram_ctrl
+- None
+versal_cips_0_pspmc_0_psv_xram_ctrl_4:
+- psv_xram_ctrl
+- None
+versal_cips_0_pspmc_0_psv_xram_global_ctrl:
+- psv_xram_global_ctrl
+- None
+versal_cips_0_pspmc_0_psv_xram_gpv:
+- psv_xram_gpv
+- None
+versal_cips_0_pspmc_0_psv_xram_xmpu_bank_1:
+- psv_xram_xmpu_bank
+- None
+versal_cips_0_pspmc_0_psv_xram_xmpu_bank_2:
+- psv_xram_xmpu_bank
+- None
+versal_cips_0_pspmc_0_psv_xram_xmpu_bank_3:
+- psv_xram_xmpu_bank
+- None
+versal_cips_0_pspmc_0_psv_xram_xmpu_bank_4:
+- psv_xram_xmpu_bank
+- None

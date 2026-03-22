@@ -1,0 +1,1 @@
+savedcmd_/work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/modules.order := {   echo /work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/myledip.o; :; } > /work/yocto/sources/meta-vd100_v2/recipes-modules/myledip/files/modules.order

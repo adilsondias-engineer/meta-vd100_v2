@@ -1,0 +1,275 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Mar 22 14:02:03 2026
+# Process ID         : 40644
+# Current directory  : J:/work/projects/versal/ledblink/hardware/ledblink.runs/design_1_MyLEDIP_0_4_synth_1
+# Command line       : vivado.exe -log design_1_MyLEDIP_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_MyLEDIP_0_4.tcl
+# Log file           : J:/work/projects/versal/ledblink/hardware/ledblink.runs/design_1_MyLEDIP_0_4_synth_1/design_1_MyLEDIP_0_4.vds
+# Journal file       : J:/work/projects/versal/ledblink/hardware/ledblink.runs/design_1_MyLEDIP_0_4_synth_1\vivado.jou
+# Running On         : Mercury
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i9-14900KF
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 137217 MB
+# Swap memory        : 33554 MB
+# Total Virtual      : 170771 MB
+# Available Virtual  : 107040 MB
+#-----------------------------------------------------------
+source design_1_MyLEDIP_0_4.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'j:/work/projects/versal/ip_repo/MyLEDIP_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+Command: synth_design -top design_1_MyLEDIP_0_4 -part xcve2302-sfva784-1LP-e-S -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcve2302'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcve2302'
+INFO: [Device 21-403] Loading part xcve2302-sfva784-1LP-e-S
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 40736
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1814.359 ; gain = 470.992
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_MyLEDIP_0_4' [j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ip/design_1_MyLEDIP_0_4/synth/design_1_MyLEDIP_0_4.vhd:83]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MyLEDIP' declared at 'j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ipshared/f36e/hdl/MyLEDIP_slave_lite_v1_0_S00_AXI.vhd:5' bound to instance 'U0' of component 'MyLEDIP' [j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ip/design_1_MyLEDIP_0_4/synth/design_1_MyLEDIP_0_4.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'MyLEDIP' [j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ipshared/f36e/hdl/MyLEDIP_slave_lite_v1_0_S00_AXI.vhd:37]
+INFO: [Synth 8-226] default block is never used [j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ipshared/f36e/hdl/MyLEDIP_slave_lite_v1_0_S00_AXI.vhd:145]
+INFO: [Synth 8-256] done synthesizing module 'MyLEDIP' (0#1) [j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ipshared/f36e/hdl/MyLEDIP_slave_lite_v1_0_S00_AXI.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'design_1_MyLEDIP_0_4' (0#1) [j:/work/projects/versal/ledblink/hardware/ledblink.gen/sources_1/bd/design_1/ip/design_1_MyLEDIP_0_4/synth/design_1_MyLEDIP_0_4.vhd:83]
+INFO: [Synth 8-7129] Port s00_axi_awprot[2] in module MyLEDIP is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_awprot[1] in module MyLEDIP is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_awprot[0] in module MyLEDIP is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_arprot[2] in module MyLEDIP is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_arprot[1] in module MyLEDIP is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_arprot[0] in module MyLEDIP is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1941.051 ; gain = 597.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1941.051 ; gain = 597.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1941.051 ; gain = 597.684
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1941.051 ; gain = 0.000
+INFO: [Constraints 18-6358] GCLK_DESKEW_DEFAULT not specified in Clock Expansion Window constraints config file for device xcve2302.  GCLK Deskew mode will be Off and cannot be enabled via GCLK_DESKEW override.
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Device 21-9335] Optimized delay calculation is enabled for this device.
+INFO: [Constraints 18-13227] Created floorplan with Advanced Flow Feature Set
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2052.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2052.500 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2052.500 ; gain = 709.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcve2302-sfva784-1LP-e-S
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2052.500 ; gain = 709.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2052.500 ; gain = 709.133
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'MyLEDIP'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'MyLEDIP'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   waddr |                               01 |                               10
+                   wdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using encoding 'sequential' in module 'MyLEDIP'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   raddr |                               01 |                               10
+                   rdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'MyLEDIP'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2052.500 ; gain = 709.133
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 4     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 464 (col length:116)
+BRAMs: 310 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port s00_axi_awprot[2] in module design_1_MyLEDIP_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_awprot[1] in module design_1_MyLEDIP_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_awprot[0] in module design_1_MyLEDIP_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_arprot[2] in module design_1_MyLEDIP_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_arprot[1] in module design_1_MyLEDIP_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s00_axi_arprot[0] in module design_1_MyLEDIP_0_4 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11322] No global retiming is needed without any clock constraint
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11322] No global retiming is needed without any clock constraint
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     3|
+|3     |LUT3 |     2|
+|4     |LUT5 |     5|
+|5     |LUT6 |    50|
+|6     |FDRE |   141|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2388.793 ; gain = 933.977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2388.793 ; gain = 1045.426
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2388.793 ; gain = 0.000
+INFO: [Constraints 18-6358] GCLK_DESKEW_DEFAULT not specified in Clock Expansion Window constraints config file for device xcve2302.  GCLK Deskew mode will be Off and cannot be enabled via GCLK_DESKEW override.
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Device 21-9335] Optimized delay calculation is enabled for this device.
+INFO: [Constraints 18-13227] Created floorplan with Advanced Flow Feature Set
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.613 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: b82c574c
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2473.613 ; gain = 1712.320
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.613 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'J:/work/projects/versal/ledblink/hardware/ledblink.runs/design_1_MyLEDIP_0_4_synth_1/design_1_MyLEDIP_0_4.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_MyLEDIP_0_4, cache-ID = cc9b5628692537a3
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.613 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'J:/work/projects/versal/ledblink/hardware/ledblink.runs/design_1_MyLEDIP_0_4_synth_1/design_1_MyLEDIP_0_4.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_MyLEDIP_0_4_utilization_synth.rpt -pb design_1_MyLEDIP_0_4_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 22 14:02:36 2026...

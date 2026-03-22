@@ -1,0 +1,26 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/work/yocto/sources/meta-vd100/recipes-customlayer/helloworld/files/helloworld",
+            "binaryPath": "/work/yocto/sources/meta-vd100/recipes-customlayer/helloworld/files/helloworld/helloworld",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "/work/yocto/sources/meta-vd100/recipes-apps/helloworld/files/helloworld",
+            "binaryPath": "/work/yocto/sources/meta-vd100/recipes-apps/helloworld/files/helloworld/helloworld",
+            "binaryArgs": []
+        }
+    ],
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib"
+    ],
+    "files.associations": {
+        "*.conf": "bitbake",
+        "*.inc": "bitbake"
+    }
+}

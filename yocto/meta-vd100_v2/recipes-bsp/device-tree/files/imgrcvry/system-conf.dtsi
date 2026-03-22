@@ -1,0 +1,7 @@
+/* system-conf.dtsi
+ * Auto-generated placeholder for Yocto SDT workflow.
+ * PetaLinux generates this file — in Yocto/SDT it is
+ * replaced by system-top.dts from SDTGen output.
+ */
+/ {
+};
