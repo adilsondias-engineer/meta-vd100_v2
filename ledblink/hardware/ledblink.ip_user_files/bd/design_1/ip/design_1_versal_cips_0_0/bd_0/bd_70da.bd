@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x46770A33C862DC6D",
+      "boundary_crc": "0x7820522B629E1ECE",
       "design_src": "SBD",
       "device": "xcve2302-sfva784-1LP-e-S",
       "name": "bd_70da",
@@ -42,7 +42,7 @@
             "value_src": "constant"
           },
           "CLK_DOMAIN": {
-            "value": "bd_70da_pspmc_0_0_pl0_ref_clk",
+            "value": "bd_70da_pspmc_0_0_pl1_ref_clk",
             "value_src": "default_prop"
           },
           "DATA_WIDTH": {
@@ -1103,6 +1103,31 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
+            "value": "240000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "pl1_ref_clk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "bd_70da_pspmc_0_0_pl1_ref_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
             "value": "100000000"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -1142,7 +1167,7 @@
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "bd_70da_pspmc_0_0_pl0_ref_clk",
+            "value": "bd_70da_pspmc_0_0_pl1_ref_clk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -1365,6 +1390,20 @@
         "direction": "O",
         "left": "93",
         "right": "0"
+      },
+      "pl_ps_irq0": {
+        "type": "intr",
+        "direction": "I",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -1574,6 +1613,9 @@
           "PMC_CRP_HSM1_REF_CTRL_FREQMHZ": {
             "value": "133.333"
           },
+          "PMC_CRP_I2C_REF_CTRL_FREQMHZ": {
+            "value": "100"
+          },
           "PMC_CRP_LSBUS_REF_CTRL_FREQMHZ": {
             "value": "100"
           },
@@ -1584,6 +1626,9 @@
             "value": "REF_CLK"
           },
           "PMC_CRP_PL0_REF_CTRL_FREQMHZ": {
+            "value": "240"
+          },
+          "PMC_CRP_PL1_REF_CTRL_FREQMHZ": {
             "value": "100"
           },
           "PMC_CRP_PPLL_CTRL_SRCSEL": {
@@ -1656,7 +1701,7 @@
             "value": "0"
           },
           "PMC_I2CPMC_PERIPHERAL": {
-            "value": "{{ENABLE 0} {IO {PMC_MIO 2 .. 3}}}"
+            "value": "{{ENABLE 1} {IO {PMC_MIO 34 .. 35}}}"
           },
           "PMC_MIO0": {
             "value": "{{AUX_IO 0} {DIRECTION out} {DRIVE_STRENGTH 12mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 1} {SLEW slow} {USAGE Reserved}}"
@@ -1764,7 +1809,7 @@
             "value": "{{AUX_IO 0} {DIRECTION inout} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
           },
           "PMC_MIO35": {
-            "value": "{{AUX_IO 0} {DIRECTION in} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
+            "value": "{{AUX_IO 0} {DIRECTION inout} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
           },
           "PMC_MIO36": {
             "value": "{{AUX_IO 0} {DIRECTION in} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Unassigned}}"
@@ -1817,12 +1862,12 @@
           "PMC_MIO_TREE_PERIPHERALS": {
             "value": [
               "{QSPI#QSPI#QSPI#QSPI#QSPI#QSPI#Loopback Clk#QSPI#QSPI#QSPI#QSPI#QSPI#QSPI#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB 2.0#USB",
-              "2.0#SD1/eMMC1##SD1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1####SD0/eMMC0##SD0/eMMC0#SD0/eMMC0#SD0/eMMC#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#sysmon_i2c#sysmon_i2c#Gem0#####UART",
+              "2.0#SD1/eMMC1##SD1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1#SD1/eMMC1#pmc_i2c#pmc_i2c###SD0/eMMC0##SD0/eMMC0#SD0/eMMC0#SD0/eMMC#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#SD0/eMMC0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#Gem0#####UART",
               "0#UART 0#######GPIO 2#GPIO 2}"
             ]
           },
           "PMC_MIO_TREE_SIGNALS": {
-            "value": "qspi0_clk#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_io[0]#qspi0_cs_b#qspi_lpbk#qspi1_cs_b#qspi1_io[0]#qspi1_io[1]#qspi1_io[2]#qspi1_io[3]#qspi1_clk#usb2phy_reset#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_tx_data[2]#ulpi_tx_data[3]#ulpi_clk#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_dir#ulpi_stp#ulpi_nxt#clk##detect#cmd#data[0]#data[1]#data[2]#data[3]#sel/data[4]####clk##cmd#data[0]#data[1]#data[2]#data[3]#sel/data[4]#dir_cmd/data[5]#dir0/data[6]#dir1/data[7]#buspwr/rst#gem0_mdc#gem0_mdio#rgmii_tx_clk#rgmii_txd[0]#rgmii_txd[1]#rgmii_txd[2]#rgmii_txd[3]#rgmii_tx_ctl#rgmii_rx_clk#rgmii_rxd[0]#rgmii_rxd[1]#scl#sda#rgmii_rx_ctl#####rxd#txd#######gpio_2_pin[24]#gpio_2_pin[25]"
+            "value": "qspi0_clk#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_io[0]#qspi0_cs_b#qspi_lpbk#qspi1_cs_b#qspi1_io[0]#qspi1_io[1]#qspi1_io[2]#qspi1_io[3]#qspi1_clk#usb2phy_reset#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_tx_data[2]#ulpi_tx_data[3]#ulpi_clk#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_dir#ulpi_stp#ulpi_nxt#clk##detect#cmd#data[0]#data[1]#data[2]#data[3]#scl#sda###clk##cmd#data[0]#data[1]#data[2]#data[3]#sel/data[4]#dir_cmd/data[5]#dir0/data[6]#dir1/data[7]#buspwr/rst#gem0_mdc#gem0_mdio#rgmii_tx_clk#rgmii_txd[0]#rgmii_txd[1]#rgmii_txd[2]#rgmii_txd[3]#rgmii_tx_ctl#rgmii_rx_clk#rgmii_rxd[0]#rgmii_rxd[1]#rgmii_rxd[2]#rgmii_rxd[3]#rgmii_rx_ctl#####rxd#txd#######gpio_2_pin[24]#gpio_2_pin[25]"
           },
           "PMC_NOC_PMC_ADDR_WIDTH": {
             "value": "64"
@@ -1900,19 +1945,19 @@
             "value": "0"
           },
           "PMC_SD1_DATA_TRANSFER_MODE": {
-            "value": "{4Bit autodir}"
+            "value": "4Bit"
           },
           "PMC_SD1_PERIPHERAL": {
-            "value": "{{CLK_100_SDR_OTAP_DLY 0x3} {CLK_200_SDR_OTAP_DLY 0x2} {CLK_50_DDR_ITAP_DLY 0x2A} {CLK_50_DDR_OTAP_DLY 0x3} {CLK_50_SDR_ITAP_DLY 0x25} {CLK_50_SDR_OTAP_DLY 0x4} {ENABLE 1} {IO {PMC_MIO 26 .. 36}}}"
+            "value": "{{CLK_100_SDR_OTAP_DLY 0x00} {CLK_200_SDR_OTAP_DLY 0x00} {CLK_50_DDR_ITAP_DLY 0x00} {CLK_50_DDR_OTAP_DLY 0x00} {CLK_50_SDR_ITAP_DLY 0x2C} {CLK_50_SDR_OTAP_DLY 0x4} {ENABLE 1} {IO {PMC_MIO 26 .. 36}}}"
           },
           "PMC_SD1_ROUTE_THROUGH_FPD": {
             "value": "0"
           },
           "PMC_SD1_SLOT_TYPE": {
-            "value": "{SD 3.0 AUTODIR}"
+            "value": "{SD 2.0}"
           },
           "PMC_SD1_SPEED_MODE": {
-            "value": "{high speed}"
+            "value": "{default speed}"
           },
           "PMC_SHOW_CCI_SMMU_SETTINGS": {
             "value": "0"
@@ -2644,10 +2689,10 @@
             "value": "{{ENABLE 0} {IO {PS_MIO 0 .. 1}}}"
           },
           "PS_I2CSYSMON_PERIPHERAL": {
-            "value": "{{ENABLE 0} {IO {PS_MIO 9 .. 10}}}"
+            "value": "{{ENABLE 0} {IO {PS_MIO 23 .. 24}}}"
           },
           "PS_IRQ_USAGE": {
-            "value": "{{CH0 0} {CH1 0} {CH10 0} {CH11 0} {CH12 0} {CH13 0} {CH14 0} {CH15 0} {CH2 0} {CH3 0} {CH4 0} {CH5 0} {CH6 0} {CH7 0} {CH8 0} {CH9 0}}"
+            "value": "{{CH0 1} {CH1 0} {CH10 0} {CH11 0} {CH12 0} {CH13 0} {CH14 0} {CH15 0} {CH2 0} {CH3 0} {CH4 0} {CH5 0} {CH6 0} {CH7 0} {CH8 0} {CH9 0}}"
           },
           "PS_KAT_ENABLE": {
             "value": "1"
@@ -2749,10 +2794,10 @@
             "value": "{{AUX_IO 0} {DIRECTION in} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
           },
           "PS_MIO9": {
-            "value": "{{AUX_IO 0} {DIRECTION inout} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
+            "value": "{{AUX_IO 0} {DIRECTION in} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
           },
           "PS_MIO10": {
-            "value": "{{AUX_IO 0} {DIRECTION inout} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
+            "value": "{{AUX_IO 0} {DIRECTION in} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
           },
           "PS_MIO11": {
             "value": "{{AUX_IO 0} {DIRECTION in} {DRIVE_STRENGTH 8mA} {OUTPUT_DATA default} {PULL pullup} {SCHMITT 0} {SLEW slow} {USAGE Reserved}}"
@@ -2851,6 +2896,9 @@
             "value": "0"
           },
           "PS_PMCPL_CLK0_BUF": {
+            "value": "1"
+          },
+          "PS_PMCPL_CLK1_BUF": {
             "value": "1"
           },
           "PS_PMU_PERIPHERAL_ENABLE": {
@@ -3127,7 +3175,7 @@
             "value": "1"
           },
           "PS_USE_PMCPL_CLK1": {
-            "value": "0"
+            "value": "1"
           },
           "PS_USE_PMCPL_CLK2": {
             "value": "0"
@@ -3244,85 +3292,85 @@
             "value": "1"
           },
           "SMON_INTERFACE_TO_USE": {
-            "value": "I2C"
+            "value": "None"
           },
           "SMON_MEAS0": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME GTYP_AVCCAUX_103} {SUPPLY_NUM 23}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME GTYP_AVCCAUX_103} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS1": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME GTYP_AVCCAUX_104} {SUPPLY_NUM 24}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME GTYP_AVCCAUX_104} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS2": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME GTYP_AVCC_103} {SUPPLY_NUM 21}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME GTYP_AVCC_103} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS3": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME GTYP_AVCC_104} {SUPPLY_NUM 22}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME GTYP_AVCC_104} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS4": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME GTYP_AVTT_103} {SUPPLY_NUM 16}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME GTYP_AVTT_103} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS5": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME GTYP_AVTT_104} {SUPPLY_NUM 17}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME GTYP_AVTT_104} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS6": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCAUX} {SUPPLY_NUM 0}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCAUX} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS7": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCAUX_PMC} {SUPPLY_NUM 1}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCAUX_PMC} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS8": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCAUX_SMON} {SUPPLY_NUM 9}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCAUX_SMON} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS9": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCINT} {SUPPLY_NUM 8}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCINT} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS10": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {4 V unipolar}} {NAME VCCO_302} {SUPPLY_NUM 10}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {4 V unipolar}} {NAME VCCO_302} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS11": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {4 V unipolar}} {NAME VCCO_500} {SUPPLY_NUM 11}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {4 V unipolar}} {NAME VCCO_500} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS12": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {4 V unipolar}} {NAME VCCO_501} {SUPPLY_NUM 12}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {4 V unipolar}} {NAME VCCO_501} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS13": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {4 V unipolar}} {NAME VCCO_502} {SUPPLY_NUM 13}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {4 V unipolar}} {NAME VCCO_502} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS14": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {4 V unipolar}} {NAME VCCO_503} {SUPPLY_NUM 15}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 4.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {4 V unipolar}} {NAME VCCO_503} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS15": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCO_700} {SUPPLY_NUM 14}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCO_700} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS16": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCO_701} {SUPPLY_NUM 20}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCO_701} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS17": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCO_702} {SUPPLY_NUM 19}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCO_702} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS18": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCCO_703} {SUPPLY_NUM 18}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCCO_703} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS19": {
             "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCC_BATT} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS20": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCC_PMC} {SUPPLY_NUM 2}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCC_PMC} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS21": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCC_PSFP} {SUPPLY_NUM 3}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCC_PSFP} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS22": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCC_PSLP} {SUPPLY_NUM 4}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCC_PSLP} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS23": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCC_RAM} {SUPPLY_NUM 7}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCC_RAM} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS24": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {2 V unipolar}} {NAME VCC_SOC} {SUPPLY_NUM 5}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {2 V unipolar}} {NAME VCC_SOC} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS25": {
-            "value": "{{ALARM_ENABLE 1} {ALARM_LOWER 0.00} {ALARM_UPPER 1.00} {AVERAGE_EN 1} {ENABLE 1} {MODE {1 V unipolar}} {NAME VP_VN} {SUPPLY_NUM 6}}"
+            "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE {1 V unipolar}} {NAME VP_VN} {SUPPLY_NUM 0}}"
           },
           "SMON_MEAS26": {
             "value": "{{ALARM_ENABLE 0} {ALARM_LOWER 0.00} {ALARM_UPPER 2.00} {AVERAGE_EN 0} {ENABLE 0} {MODE None} {NAME GT_AVAUX_PKG_103} {SUPPLY_NUM 0}}"
@@ -3786,9 +3834,6 @@
           "SMON_OT": {
             "value": "{{THRESHOLD_LOWER 70} {THRESHOLD_UPPER 125}}"
           },
-          "SMON_PMBUS_ADDRESS": {
-            "value": "0x0"
-          },
           "SMON_REFERENCE_SOURCE": {
             "value": "Internal"
           },
@@ -3850,7 +3895,7 @@
             "value": "MIO_BANK0"
           },
           "SMON_VOLTAGE_AVERAGING_SAMPLES": {
-            "value": "2"
+            "value": "None"
           },
           "SPP_PSPMC_FROM_CORE_WIDTH": {
             "value": "12000"
@@ -5299,6 +5344,18 @@
                 "psv_pmc_global_0": {
                   "base_address": "0xF1110000",
                   "range": "320K",
+                  "width": "32",
+                  "usage": "register",
+                  "offset_base_param": "C_S_AXI_BASEADDR",
+                  "offset_high_param": "C_S_AXI_HIGHADDR"
+                }
+              }
+            },
+            "PMC_I2C_INT": {
+              "address_blocks": {
+                "psv_pmc_i2c_0": {
+                  "base_address": "0xF1000000",
+                  "range": "64K",
                   "width": "32",
                   "usage": "register",
                   "offset_base_param": "C_S_AXI_BASEADDR",
@@ -10408,6 +10465,12 @@
           "pspmc_0/m_axi_fpd_aclk"
         ]
       },
+      "pl_ps_irq0_1": {
+        "ports": [
+          "pl_ps_irq0",
+          "pspmc_0/pl_ps_irq0"
+        ]
+      },
       "pspmc_0_fpd_cci_noc_axi0_clk": {
         "ports": [
           "pspmc_0/fpd_cci_noc_axi0_clk",
@@ -10460,6 +10523,12 @@
         "ports": [
           "pspmc_0/pl0_resetn",
           "pl0_resetn"
+        ]
+      },
+      "pspmc_0_pl1_ref_clk": {
+        "ports": [
+          "pspmc_0/pl1_ref_clk",
+          "pl1_ref_clk"
         ]
       },
       "pspmc_0_pmc_axi_noc_axi0_clk": {
@@ -11720,6 +11789,14 @@
                 "address_block": "/pspmc_0/PMC_GLOBAL_INT/psv_pmc_global_0",
                 "offset": "0x000F1110000",
                 "range": "320K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
                 "is_internal": "TRUE",
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"
@@ -13277,6 +13354,14 @@
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"
               },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
               "SEG_PMC_IOU_SLCR_psv_pmc_iou_slcr_0": {
                 "address_block": "/pspmc_0/PMC_IOU_SLCR/psv_pmc_iou_slcr_0",
                 "offset": "0x000F1060000",
@@ -14776,6 +14861,14 @@
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"
               },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
               "SEG_PMC_IOU_SLCR_psv_pmc_iou_slcr_0": {
                 "address_block": "/pspmc_0/PMC_IOU_SLCR/psv_pmc_iou_slcr_0",
                 "offset": "0x000F1060000",
@@ -16188,6 +16281,14 @@
                 "address_block": "/pspmc_0/PMC_GLOBAL_INT/psv_pmc_global_0",
                 "offset": "0x000F1110000",
                 "range": "320K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
                 "is_internal": "TRUE",
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"
@@ -17639,6 +17740,14 @@
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"
               },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
               "SEG_PMC_IOU_SLCR_psv_pmc_iou_slcr_0": {
                 "address_block": "/pspmc_0/PMC_IOU_SLCR/psv_pmc_iou_slcr_0",
                 "offset": "0x000F1060000",
@@ -18788,6 +18897,14 @@
                 "address_block": "/pspmc_0/PMC_GLOBAL_INT/psv_pmc_global_0",
                 "offset": "0x000F1110000",
                 "range": "320K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
                 "is_internal": "TRUE",
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"
@@ -20091,6 +20208,14 @@
                 "address_block": "/pspmc_0/PMC_GLOBAL_INT/psv_pmc_global_0",
                 "offset": "0x000F1110000",
                 "range": "320K",
+                "is_internal": "TRUE",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              },
+              "SEG_PMC_I2C_INT_psv_pmc_i2c_0": {
+                "address_block": "/pspmc_0/PMC_I2C_INT/psv_pmc_i2c_0",
+                "offset": "0x000F1000000",
+                "range": "64K",
                 "is_internal": "TRUE",
                 "offset_base_param": "C_S_AXI_BASEADDR",
                 "offset_high_param": "C_S_AXI_HIGHADDR"

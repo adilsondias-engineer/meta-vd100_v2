@@ -93,9 +93,9 @@ mask_write 0xf1060080 0x3fe 0x2
 marker 0 "Configures MIO Pin 33 peripheral interface mapping"
 mask_write 0xf1060084 0x3fe 0x2
 marker 0 "Configures MIO Pin 34 peripheral interface mapping"
-mask_write 0xf1060088 0x3fe 0x2
+mask_write 0xf1060088 0x3fe 0x300
 marker 0 "Configures MIO Pin 35 peripheral interface mapping"
-mask_write 0xf106008c 0x3fe 0x380
+mask_write 0xf106008c 0x3fe 0x300
 marker 0 "Configures MIO Pin 36 peripheral interface mapping"
 mask_write 0xf1060090 0x3fe 0x380
 marker 0 "Configures MIO Pin 37 peripheral interface mapping"
@@ -131,31 +131,31 @@ mask_write 0xf10600cc 0x3fe 0x180
 marker 0 "bnk0_en_wk_pu"
 mask_write 0xf1060114 0x3ffffff 0x3ffffff
 marker 0 "bnk1_en_wk_pu"
-mask_write 0xf1060314 0x3ffd1fd 0x3ffd1fd
+mask_write 0xf1060314 0x3ffd3fd 0x3ffd3fd
 marker 0 "bnk0_en_wk_pd"
 mask_write 0xf1060110 0x3ffffff 0
 marker 0 "bnk1_en_wk_pd"
-mask_write 0xf1060310 0x3ffd1fd 0
+mask_write 0xf1060310 0x3ffd3fd 0
 marker 0 "bnk0_sel_slew"
 mask_write 0xf1060120 0x3ffffff 0
 marker 0 "bnk1_sel_slew"
-mask_write 0xf1060320 0x3ffd1fd 0
+mask_write 0xf1060320 0x3ffd3fd 0
 marker 0 "bnk0_sel_drv0"
 mask_write 0xf1060118 0xffffffff 0xabffffff
 marker 0 "bnk0_sel_drv1"
 mask_write 0xf106011c 0xfffff 0xaaaaa
 marker 0 "bnk1_sel_drv0"
-mask_write 0xf1060318 0xf303fff3 0xa202aaa2
+mask_write 0xf1060318 0xf30ffff3 0xa20aaaa2
 marker 0 "bnk1_sel_drv1"
 mask_write 0xf106031c 0xfffff 0xaaaaa
 marker 0 "bnk0_en_rx_schmitt_hyst"
 mask_write 0xf106010c 0x3ffffff 0x1003fff
 marker 0 "bnk1_en_rx_schmitt_hyst"
-mask_write 0xf106030c 0x3ffd1fd 0x1800000
+mask_write 0xf106030c 0x3ffd3fd 0x1800000
 marker 0 "MIO pin Tri-state Enables, 31:0"
 mask_write 0xf1060200 0x3ffffff 0x2840000
 marker 0 "MIO pin Tri-state Enables, 63:32"
-mask_write 0xf1060204 0x3ffd1fd 0x4
+mask_write 0xf1060204 0x3ffd3fd 0x4
 marker 0 "LOCKING SLCR"
 marker 0 "PMC SLCR Write protection register for IO Muxes"
 mask_write 0xf1060828 0x1 0x1
@@ -228,8 +228,12 @@ marker 0 "This register controls the sdio1_ref clock"
 mask_write 0xf1260128 0x103ff07 0x1000600
 marker 0 "This register controls the sd_dll_ref clock"
 mask_write 0xf1260160 0x203ff07 0x2000100
+marker 0 "This register controls the i2c_ref clock"
+mask_write 0xf1260130 0x103ff07 0x1000c00
 marker 0 "This register controls the pmc_pl0_ref clock"
-mask_write 0xf12605c0 0x103ff07 0x1000c00
+mask_write 0xf12605c0 0x103ff07 0x1000500
+marker 0 "This register controls the pmc_pl1_ref clock"
+mask_write 0xf12605c4 0x103ff07 0x1000c00
 marker 0 "This register controls the efuse_ref clock"
 mask_write 0xf1260134 0x4 0
 marker 0 "This register controls the usb_suspend clock; This clock is not a PLL based clock. The input to this divider is IROCLK divide by 4."
@@ -269,11 +273,9 @@ write 0xf1280198 0
 write 0xf128019c 0
 write 0xf12801a0 0
 write 0xf1280500 0 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0 0 0
-write 0xf1280524 0x27cb0002 0x278b0003 0x274b0001 0x26c50000 0x26460000 0x26870000 0x270b0006 0x26040000 0x60000 0x2480001 0x2040000 0x1c70000 0x1450000
+write 0xf1280524 0x27cb0002 0x278b0003 0x274b0001 0x26c50000 0x26460000 0x26870000 0x270b0006 0x26040000
 write 0xf1280504 0x3020100
-write 0xf1280508 0x7060504
-write 0xf128050c 0xb0a0908
-write 0xf1280510 0x4c
+write 0xf1280508 0x47060504
 write 0xf128011c 0x4
 write 0xf1280120 0
 write 0xf1280118 0x4f
@@ -318,12 +320,9 @@ write 0xf1290198 0
 write 0xf129019c 0
 write 0xf12901a0 0
 write 0xf1290500 0 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0 0 0
-write 0xf1290524 0x4b0003 0x2f80078 0x3380070 0x3f90004 0x8b0002 0xcb0006 0x10b0001 0x1970000
-write 0xf1290504 0x3020100
-write 0xf1290508 0x47060504
 write 0xf129011c 0x45
 write 0xf1290120 0x4
-write 0xf1290118 0x5f
+write 0xf1290118 0x4f
 marker 0 "SAT1 PCSR END SEQUENCE"
 marker 0 "GATEREG DEASSERT"
 marker 0 "Programming Mask Register"
@@ -726,106 +725,6 @@ write 0xf12724b4 0xffffffff
 write 0xf12724b8 0xffffffff
 marker 0 "ROOT SYSMON CONFIGURATION"
 marker 0 "Description"
-mask_write 0xf1271980 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c80 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf1271984 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c84 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf1271988 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c88 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf127198c 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c8c 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf1271990 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c90 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf1271994 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c94 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf1271998 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c98 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf127199c 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271c9c 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719a0 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271ca0 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719a4 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271ca4 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719a8 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271ca8 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719ac 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cac 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719b0 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cb0 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719b4 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cb4 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719b8 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cb8 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719bc 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cbc 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719c0 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cc0 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719c4 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cc4 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719c8 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cc8 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719cc 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271ccc 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719d0 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cd0 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719d4 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cd4 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719d8 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cd8 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719dc 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271cdc 0xffff 0xffff
-marker 0 "Description"
-mask_write 0xf12719e0 0xffff 0
-marker 0 "Description"
-mask_write 0xf1271ce0 0xffff 0xffff
-marker 0 "Description"
 mask_write 0xf1271970 0xffff 0x2300
 marker 0 "Description"
 mask_write 0xf1271974 0xffff 0x3e80
@@ -834,13 +733,9 @@ mask_write 0xf127197c 0xffff 0x3e80
 marker 0 "Description"
 mask_write 0xf1271978 0xffff 0x2300
 marker 0 "Description"
-mask_write 0xf1271940 0xffffffff 0x1ffffff
-marker 0 "Description"
-mask_write 0xf1271958 0xffffffff 0x1ffffff
-marker 0 "Description"
 mask_write 0xf1271f84 0x3 0x3
 marker 0 "Description"
-mask_write 0xf1270100 0xf83c2ff 0x804280
+mask_write 0xf1270100 0xf83c000 0x800000
 marker 0 "Description"
 mask_write 0xf1270120 0x200 0x200
 marker 0 "ROOT PCSR END SEQUENCE"
@@ -903,7 +798,7 @@ marker 0 "SD1"
 marker 0 "SD eMMC selection"
 mask_write 0xf1060484 0x1 0
 marker 0 "SD Config Register 2"
-mask_write 0xf1060494 0x3380 0x280
+mask_write 0xf1060494 0x3380 0x80
 marker 0 "SD1 RETUNER"
 marker 0 "SD Config Register 3"
 mask_write 0xf1060498 0x3c0 0
@@ -916,6 +811,9 @@ mask_write 0xf1260334 0x1 0
 marker 0 "QSPI RESET RELESE"
 marker 0 "Reset for Individual block"
 mask_write 0xf1260300 0x1 0
+marker 0 "PMC I2C RESET RELESE"
+marker 0 "Reset for Individual block"
+mask_write 0xf1260314 0x1 0
 marker 0 "GPIO RESET RELESE"
 marker 0 "Reset for Individual block"
 mask_write 0xf1260318 0x1 0

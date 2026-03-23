@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBDBE0D5F2DF384CB",
+      "boundary_crc": "0xB5C74A9E884A71A3",
       "design_src": "SBD",
       "device": "xcve2302-sfva784-1LP-e-S",
       "name": "bd_4b24",
@@ -48,7 +48,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi0_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "CONNECTIONS": {
             "value": "MC_3 {read_bw {500} write_bw {500} read_avg_burst {4} write_avg_burst {4} initial_boot {true} }"
@@ -242,7 +242,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi1_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "CONNECTIONS": {
             "value": "MC_2 {read_bw {500} write_bw {500} read_avg_burst {4} write_avg_burst {4} initial_boot {true} }"
@@ -436,7 +436,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi2_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "CONNECTIONS": {
             "value": "MC_0 {read_bw {100} write_bw {100} read_avg_burst {4} write_avg_burst {4} initial_boot {true} }"
@@ -630,7 +630,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi3_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "CONNECTIONS": {
             "value": "MC_1 {read_bw {100} write_bw {100} read_avg_burst {4} write_avg_burst {4} initial_boot {true} }"
@@ -824,7 +824,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_lpd_axi_noc_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "CONNECTIONS": {
             "value": "MC_3 {read_bw {100} write_bw {100} read_avg_burst {4} write_avg_burst {4} initial_boot {true} }"
@@ -1021,7 +1021,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_pmc_axi_noc_axi0_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "CONNECTIONS": {
             "value": "MC_2 {read_bw {500} write_bw {500} read_avg_burst {4} write_avg_burst {4} initial_boot {true} }"
@@ -1291,7 +1291,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi0_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "550000000",
@@ -1320,7 +1320,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi1_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "550000000",
@@ -1349,7 +1349,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi2_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "550000000",
@@ -1378,7 +1378,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_fpd_cci_noc_axi3_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "550000000",
@@ -1407,7 +1407,7 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_lpd_axi_noc_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "400000000",
@@ -1436,36 +1436,10 @@
           },
           "CLK_DOMAIN": {
             "value": "bd_70da_pspmc_0_0_pmc_axi_noc_axi0_clk",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "320000000",
-            "value_src": "user_prop"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
-      "aclk6": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "bd_70da_pspmc_0_0_pl0_ref_clk",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -5822,7 +5796,7 @@
             "value": "DDR_LOW0"
           },
           "MC_CHAN_REGION1": {
-            "value": "DDR_LOW0"
+            "value": "NONE"
           },
           "MC_CKE_WIDTH": {
             "value": "1"

@@ -270,7 +270,6 @@ module design_1_axi_noc_0_1 (
   aclk3,
   aclk4,
   aclk5,
-  aclk6,
   sys_clk0_clk_p,
   sys_clk0_clk_n,
   CH0_DDR4_0_dq,
@@ -800,10 +799,6 @@ input wire aclk4;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk5, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pmc_axi_noc_axi0_clk, ASSOCIATED_BUSIF S05_AXI, INSERT_VIP 0" *)
 input wire aclk5;
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.aclk6 CLK" *)
-(* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk6, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, INSERT_VIP 0" *)
-input wire aclk6;
 (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sys_clk0 CLK_P" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sys_clk0, CAN_DEBUG false, FREQ_HZ 200000000, BOARD.ASSOCIATED_PARAM sys_clk0_BOARD_INTERFACE" *)
@@ -1156,7 +1151,6 @@ input wire [16 : 0] S05_AXI_wuser;
     .aclk3(aclk3),
     .aclk4(aclk4),
     .aclk5(aclk5),
-    .aclk6(aclk6),
     .sys_clk0_clk_p(sys_clk0_clk_p),
     .sys_clk0_clk_n(sys_clk0_clk_n),
     .CH0_DDR4_0_dq(CH0_DDR4_0_dq),

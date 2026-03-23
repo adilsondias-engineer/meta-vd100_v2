@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
---Date        : Sun Mar 22 14:01:11 2026
+--Date        : Mon Mar 23 13:57:45 2026
 --Host        : Mercury running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -34,7 +34,7 @@ entity design_1 is
     sys_clk_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_noc_cnt=1,da_board_cnt=14,da_cips_cnt=1,da_clkrst_cnt=13,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_noc_cnt=1,da_board_cnt=14,da_cips_cnt=1,da_clkrst_cnt=14,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -43,6 +43,7 @@ architecture STRUCTURE of design_1 is
   component design_1_versal_cips_0_0 is
   port (
     pl0_ref_clk : out STD_LOGIC;
+    pl1_ref_clk : out STD_LOGIC;
     pl0_resetn : out STD_LOGIC;
     m_axi_fpd_aclk : in STD_LOGIC;
     fpd_cci_noc_axi0_clk : out STD_LOGIC;
@@ -337,7 +338,8 @@ architecture STRUCTURE of design_1 is
     PMC_NOC_AXI_0_wready : in STD_LOGIC;
     LPD_GPIO_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     LPD_GPIO_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    LPD_GPIO_t : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    LPD_GPIO_t : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    pl_ps_irq0 : in STD_LOGIC
   );
   end component design_1_versal_cips_0_0;
   component design_1_axi_noc_0_1 is
@@ -558,7 +560,6 @@ architecture STRUCTURE of design_1 is
     aclk3 : in STD_LOGIC;
     aclk4 : in STD_LOGIC;
     aclk5 : in STD_LOGIC;
-    aclk6 : in STD_LOGIC;
     sys_clk0_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clk0_clk_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     CH0_DDR4_0_dq : inout STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -750,6 +751,7 @@ architecture STRUCTURE of design_1 is
   signal axi_smc_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_smc_M00_AXI_WVALID : STD_LOGIC;
   signal ilconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal ilvector_logic_0_Res : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_versal_cips_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal versal_cips_0_FPD_CCI_NOC_0_ARADDR : STD_LOGIC_VECTOR ( 63 downto 0 );
   attribute HARD_CONN : string;
@@ -1287,8 +1289,8 @@ architecture STRUCTURE of design_1 is
   attribute HARD_CONN of versal_cips_0_fpd_cci_noc_axi3_clk : signal is "true";
   signal versal_cips_0_lpd_axi_noc_clk : STD_LOGIC;
   attribute HARD_CONN of versal_cips_0_lpd_axi_noc_clk : signal is "true";
-  signal versal_cips_0_pl0_ref_clk : STD_LOGIC;
   signal versal_cips_0_pl0_resetn : STD_LOGIC;
+  signal versal_cips_0_pl1_ref_clk : STD_LOGIC;
   signal versal_cips_0_pmc_axi_noc_axi0_clk : STD_LOGIC;
   attribute HARD_CONN of versal_cips_0_pmc_axi_noc_axi0_clk : signal is "true";
   signal NLW_axi_noc_0_S00_AXI_ruser_UNCONNECTED : STD_LOGIC_VECTOR ( 16 downto 0 );
@@ -1300,6 +1302,7 @@ architecture STRUCTURE of design_1 is
   signal NLW_rst_versal_cips_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_versal_cips_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_versal_cips_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_versal_cips_0_pl0_ref_clk_UNCONNECTED : STD_LOGIC;
   signal NLW_versal_cips_0_LPD_GPIO_o_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_versal_cips_0_LPD_GPIO_t_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_versal_cips_0_PMC_NOC_AXI_0_wid_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -1333,7 +1336,7 @@ begin
 MyLEDIP_0: component design_1_MyLEDIP_0_4
      port map (
       pl_led => led,
-      s00_axi_aclk => versal_cips_0_pl0_ref_clk,
+      s00_axi_aclk => versal_cips_0_pl1_ref_clk,
       s00_axi_araddr(3 downto 0) => axi_smc_M00_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_versal_cips_0_100M_peripheral_aresetn(0),
       s00_axi_arprot(2 downto 0) => axi_smc_M00_AXI_ARPROT(2 downto 0),
@@ -1636,7 +1639,6 @@ axi_noc_0: component design_1_axi_noc_0_1
       aclk3 => versal_cips_0_fpd_cci_noc_axi3_clk,
       aclk4 => versal_cips_0_lpd_axi_noc_clk,
       aclk5 => versal_cips_0_pmc_axi_noc_axi0_clk,
-      aclk6 => versal_cips_0_pl0_ref_clk,
       sys_clk0_clk_n(0) => sys_clk_clk_n(0),
       sys_clk0_clk_p(0) => sys_clk_clk_p(0)
     );
@@ -1700,10 +1702,11 @@ axi_smc: component design_1_axi_smc_0
       S00_AXI_wready => versal_cips_0_M_AXI_FPD_WREADY,
       S00_AXI_wstrb(15 downto 0) => versal_cips_0_M_AXI_FPD_WSTRB(15 downto 0),
       S00_AXI_wvalid => versal_cips_0_M_AXI_FPD_WVALID,
-      aclk => versal_cips_0_pl0_ref_clk,
+      aclk => versal_cips_0_pl1_ref_clk,
       aresetn => rst_versal_cips_0_100M_peripheral_aresetn(0)
     );
   ilconstant_0_dout <= B"1";
+  ilvector_logic_0_Res <= not (0 to 0 => rst_n);
 rst_versal_cips_0_100M: component design_1_rst_versal_cips_0_100M_0
      port map (
       aux_reset_in => rst_n,
@@ -1715,7 +1718,7 @@ rst_versal_cips_0_100M: component design_1_rst_versal_cips_0_100M_0
       mb_reset => NLW_rst_versal_cips_0_100M_mb_reset_UNCONNECTED,
       peripheral_aresetn(0) => rst_versal_cips_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_versal_cips_0_100M_peripheral_reset_UNCONNECTED(0),
-      slowest_sync_clk => versal_cips_0_pl0_ref_clk
+      slowest_sync_clk => versal_cips_0_pl1_ref_clk
     );
 versal_cips_0: component design_1_versal_cips_0_0
      port map (
@@ -2011,9 +2014,11 @@ versal_cips_0: component design_1_versal_cips_0_0
       fpd_cci_noc_axi3_clk => versal_cips_0_fpd_cci_noc_axi3_clk,
       gem0_tsu_timer_cnt(93 downto 0) => NLW_versal_cips_0_gem0_tsu_timer_cnt_UNCONNECTED(93 downto 0),
       lpd_axi_noc_clk => versal_cips_0_lpd_axi_noc_clk,
-      m_axi_fpd_aclk => versal_cips_0_pl0_ref_clk,
-      pl0_ref_clk => versal_cips_0_pl0_ref_clk,
+      m_axi_fpd_aclk => versal_cips_0_pl1_ref_clk,
+      pl0_ref_clk => NLW_versal_cips_0_pl0_ref_clk_UNCONNECTED,
       pl0_resetn => versal_cips_0_pl0_resetn,
+      pl1_ref_clk => versal_cips_0_pl1_ref_clk,
+      pl_ps_irq0 => ilvector_logic_0_Res(0),
       pmc_axi_noc_axi0_clk => versal_cips_0_pmc_axi_noc_axi0_clk
     );
 end STRUCTURE;

@@ -55,6 +55,7 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_70da_pspmc_0_0 (
   pl0_ref_clk,
+  pl1_ref_clk,
   pl0_resetn,
   m_axi_fpd_aclk,
   m_axi_fpd_awid,
@@ -350,6 +351,7 @@ module bd_70da_pspmc_0_0 (
   lpd_gpio_o,
   lpd_gpio_i,
   lpd_gpio_t,
+  pl_ps_irq0,
   s_axi_xram3_aclk,
   lpd_lsbus_clk,
   ps_ocm2_apb_prdata,
@@ -411,19 +413,23 @@ module bd_70da_pspmc_0_0 (
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 PL0_REF_CLK CLK" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL0_REF_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL0_REF_CLK, FREQ_HZ 240000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, INSERT_VIP 0" *)
 output wire pl0_ref_clk;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 PL1_REF_CLK CLK" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL1_REF_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl1_ref_clk, INSERT_VIP 0" *)
+output wire pl1_ref_clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 PL0_RESETN RESET" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL0_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 output wire pl0_resetn;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_axi_fpd_aclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_fpd_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, ASSOCIATED_BUSIF M_AXI_FPD, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_fpd_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl1_ref_clk, ASSOCIATED_BUSIF M_AXI_FPD, INSERT_VIP 0" *)
 input wire m_axi_fpd_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_FPD AWID" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_FPD, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 16, ADDR_WIDTH 44, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, NUM_READ_THREADS 1, NUM\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_FPD, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 16, ADDR_WIDTH 44, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl1_ref_clk, NUM_READ_THREADS 1, NUM\
 _WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, CATEGORY pl, MY_CATEGORY ps" *)
 output wire [15 : 0] m_axi_fpd_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_FPD AWADDR" *)
@@ -1040,6 +1046,10 @@ output wire [31 : 0] lpd_gpio_o;
 input wire [31 : 0] lpd_gpio_i;
 (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LPD_GPIO T" *)
 output wire [31 : 0] lpd_gpio_t;
+(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 PL_PS_IRQ0 INTERRUPT" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL_PS_IRQ0, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
+input wire pl_ps_irq0;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axi_xram3_aclk CLK" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_xram3_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_s_axi_xram3_aclk, ASSOCIATED_BUSIF S_AXI_XRAM3, INSERT_VIP 0" *)
@@ -1196,7 +1206,7 @@ output wire ps_ocm2_axi_wvalid;
     .C_NUM_F2P0_INTR_INPUTS("1"),
     .C_NUM_F2P1_INTR_INPUTS("1"),
     .C_PMCPL_CLK0_BUF(1),
-    .C_PMCPL_CLK1_BUF(0),
+    .C_PMCPL_CLK1_BUF(1),
     .C_PMCPL_CLK2_BUF(0),
     .C_PMCPL_CLK3_BUF(0),
     .C_PMCPL_IRO_CLK_BUF(0),
@@ -1212,7 +1222,7 @@ output wire ps_ocm2_axi_wvalid;
     .C_VIP_SUBCORE_NAME("versal_cips_ps_vip"),
     .C_CORE_NAME("design_2_versal_cips_0_0"),
     .C_SD0_DATA_WIDTH(8),
-    .C_SD1_DATA_WIDTH(5),
+    .C_SD1_DATA_WIDTH(4),
     .C_PS_TRACE_WIDTH(2),
     .C_PS_TRACE_PERIPHERAL(0),
     .C_PS_USE_STARTUP(0),
@@ -1233,6 +1243,7 @@ output wire ps_ocm2_axi_wvalid;
     .C_GEM_TSU_ENABLE(1)
   ) inst (
     .pl0_ref_clk(pl0_ref_clk),
+    .pl1_ref_clk(pl1_ref_clk),
     .pl0_resetn(pl0_resetn),
     .m_axi_fpd_aclk(m_axi_fpd_aclk),
     .m_axi_fpd_awid(m_axi_fpd_awid),
@@ -1528,6 +1539,7 @@ output wire ps_ocm2_axi_wvalid;
     .lpd_gpio_o(lpd_gpio_o),
     .lpd_gpio_i(lpd_gpio_i),
     .lpd_gpio_t(lpd_gpio_t),
+    .pl_ps_irq0(pl_ps_irq0),
     .s_axi_xram3_aclk(s_axi_xram3_aclk),
     .lpd_lsbus_clk(lpd_lsbus_clk),
     .ps_ocm2_apb_prdata(ps_ocm2_apb_prdata),

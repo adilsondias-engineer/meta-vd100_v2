@@ -56,6 +56,7 @@
 (* DONT_TOUCH = "true" *)
 module design_1_versal_cips_0_0 (
   pl0_ref_clk,
+  pl1_ref_clk,
   pl0_resetn,
   m_axi_fpd_aclk,
   fpd_cci_noc_axi0_clk,
@@ -65,6 +66,7 @@ module design_1_versal_cips_0_0 (
   lpd_axi_noc_clk,
   pmc_axi_noc_axi0_clk,
   gem0_tsu_timer_cnt,
+  pl_ps_irq0,
   M_AXI_FPD_awid,
   M_AXI_FPD_awaddr,
   M_AXI_FPD_awlen,
@@ -355,15 +357,19 @@ module design_1_versal_cips_0_0 (
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.pl0_ref_clk CLK" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.pl0_ref_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.pl0_ref_clk, FREQ_HZ 240000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, INSERT_VIP 0" *)
 output wire pl0_ref_clk;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.pl1_ref_clk CLK" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.pl1_ref_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl1_ref_clk, INSERT_VIP 0" *)
+output wire pl1_ref_clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.pl0_resetn RST" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.pl0_resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 output wire pl0_resetn;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.m_axi_fpd_aclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.m_axi_fpd_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, ASSOCIATED_BUSIF M_AXI_FPD, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.m_axi_fpd_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl1_ref_clk, ASSOCIATED_BUSIF M_AXI_FPD, INSERT_VIP 0" *)
 input wire m_axi_fpd_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.fpd_cci_noc_axi0_clk CLK" *)
 (* X_INTERFACE_MODE = "master" *)
@@ -390,9 +396,13 @@ output wire lpd_axi_noc_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.pmc_axi_noc_axi0_clk, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pmc_axi_noc_axi0_clk, ASSOCIATED_BUSIF PMC_NOC_AXI_0, INSERT_VIP 0, PHYSICAL_CHANNEL PS_PMC_TO_NOC_NMU" *)
 output wire pmc_axi_noc_axi0_clk;
 output wire [93 : 0] gem0_tsu_timer_cnt;
+(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.pl_ps_irq0 INTERRUPT" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.pl_ps_irq0, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
+input wire pl_ps_irq0;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_FPD AWID" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_FPD, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 16, ADDR_WIDTH 44, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, NUM_READ_THREADS 1, NUM\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_FPD, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 16, ADDR_WIDTH 44, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl1_ref_clk, NUM_READ_THREADS 1, NUM\
 _WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, CATEGORY pl, MY_CATEGORY ps" *)
 output wire [15 : 0] M_AXI_FPD_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_FPD AWADDR" *)
@@ -987,6 +997,7 @@ output wire [31 : 0] LPD_GPIO_t;
 
   bd_70da inst (
     .pl0_ref_clk(pl0_ref_clk),
+    .pl1_ref_clk(pl1_ref_clk),
     .pl0_resetn(pl0_resetn),
     .m_axi_fpd_aclk(m_axi_fpd_aclk),
     .fpd_cci_noc_axi0_clk(fpd_cci_noc_axi0_clk),
@@ -996,6 +1007,7 @@ output wire [31 : 0] LPD_GPIO_t;
     .lpd_axi_noc_clk(lpd_axi_noc_clk),
     .pmc_axi_noc_axi0_clk(pmc_axi_noc_axi0_clk),
     .gem0_tsu_timer_cnt(gem0_tsu_timer_cnt),
+    .pl_ps_irq0(pl_ps_irq0),
     .M_AXI_FPD_awid(M_AXI_FPD_awid),
     .M_AXI_FPD_awaddr(M_AXI_FPD_awaddr),
     .M_AXI_FPD_awlen(M_AXI_FPD_awlen),

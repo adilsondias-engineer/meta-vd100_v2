@@ -1,0 +1,3 @@
+# meta-v100_v2/recipes-core/udev/files/99-myledip.rules
+KERNEL=="myledip", GROUP="pldev", MODE="0660"
+KERNEL=="gpiochip0", GROUP="pldev", MODE="0660"

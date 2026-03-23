@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sat Mar 21 22:30:25 2026
+-- Date        : Sun Mar 22 23:17:58 2026
 -- Host        : Mercury running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_noc_0_1 -prefix
 --               design_1_axi_noc_0_1_ design_1_axi_noc_0_1_sim_netlist.vhdl
@@ -22291,7 +22291,6 @@ entity design_1_axi_noc_0_1_bd_4b24 is
     aclk3 : in STD_LOGIC;
     aclk4 : in STD_LOGIC;
     aclk5 : in STD_LOGIC;
-    aclk6 : in STD_LOGIC;
     sys_clk0_clk_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clk0_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -22395,8 +22394,6 @@ architecture STRUCTURE of design_1_axi_noc_0_1_bd_4b24 is
   attribute X_INTERFACE_PARAMETER of aclk4 : signal is "XIL_INTERFACENAME CLK.ACLK4, ASSOCIATED_BUSIF S04_AXI, CLK_DOMAIN bd_70da_pspmc_0_0_lpd_axi_noc_clk, FREQ_HZ 400000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of aclk5 : signal is "xilinx.com:signal:clock:1.0 CLK.ACLK5 CLK";
   attribute X_INTERFACE_PARAMETER of aclk5 : signal is "XIL_INTERFACENAME CLK.ACLK5, ASSOCIATED_BUSIF S05_AXI, CLK_DOMAIN bd_70da_pspmc_0_0_pmc_axi_noc_axi0_clk, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of aclk6 : signal is "xilinx.com:signal:clock:1.0 CLK.ACLK6 CLK";
-  attribute X_INTERFACE_PARAMETER of aclk6 : signal is "XIL_INTERFACENAME CLK.ACLK6, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of CH0_DDR4_0_act_n : signal is "xilinx.com:interface:ddr4:1.0 CH0_DDR4_0 ACT_N";
   attribute X_INTERFACE_MODE : string;
   attribute X_INTERFACE_MODE of CH0_DDR4_0_act_n : signal is "Master";
@@ -23339,7 +23336,6 @@ entity design_1_axi_noc_0_1 is
     aclk3 : in STD_LOGIC;
     aclk4 : in STD_LOGIC;
     aclk5 : in STD_LOGIC;
-    aclk6 : in STD_LOGIC;
     sys_clk0_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clk0_clk_n : in STD_LOGIC_VECTOR ( 0 to 0 );
     CH0_DDR4_0_dq : inout STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -23440,9 +23436,6 @@ architecture STRUCTURE of design_1_axi_noc_0_1 is
   attribute X_INTERFACE_INFO of aclk5 : signal is "xilinx.com:signal:clock:1.0 CLK.aclk5 CLK";
   attribute X_INTERFACE_MODE of aclk5 : signal is "slave";
   attribute X_INTERFACE_PARAMETER of aclk5 : signal is "XIL_INTERFACENAME CLK.aclk5, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pmc_axi_noc_axi0_clk, ASSOCIATED_BUSIF S05_AXI, INSERT_VIP 0";
-  attribute X_INTERFACE_INFO of aclk6 : signal is "xilinx.com:signal:clock:1.0 CLK.aclk6 CLK";
-  attribute X_INTERFACE_MODE of aclk6 : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of aclk6 : signal is "XIL_INTERFACENAME CLK.aclk6, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_70da_pspmc_0_0_pl0_ref_clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of CH0_DDR4_0_act_n : signal is "xilinx.com:interface:ddr4:1.0 CH0_DDR4_0 ACT_N";
   attribute X_INTERFACE_INFO of CH0_DDR4_0_adr : signal is "xilinx.com:interface:ddr4:1.0 CH0_DDR4_0 ADR";
   attribute X_INTERFACE_INFO of CH0_DDR4_0_ba : signal is "xilinx.com:interface:ddr4:1.0 CH0_DDR4_0 BA";
@@ -24016,7 +24009,6 @@ inst: entity work.design_1_axi_noc_0_1_bd_4b24
       aclk3 => aclk3,
       aclk4 => aclk4,
       aclk5 => aclk5,
-      aclk6 => '0',
       sys_clk0_clk_n(0) => sys_clk0_clk_n(0),
       sys_clk0_clk_p(0) => sys_clk0_clk_p(0)
     );

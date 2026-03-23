@@ -172,6 +172,9 @@ versal_cips_0_pspmc_0_psv_pmc_efuse_ctrl:
 versal_cips_0_pspmc_0_psv_pmc_global_0:
 - psv_pmc_global
 - None
+versal_cips_0_pspmc_0_psv_pmc_i2c_0:
+- psv_pmc_i2c
+- iicps
 versal_cips_0_pspmc_0_psv_pmc_iou_slcr_0:
 - psv_pmc_iou_slcr
 - None

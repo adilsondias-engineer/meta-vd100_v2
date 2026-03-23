@@ -1,60 +1,60 @@
-2026-03-21 22:42:27,032 - [DEBUG] Getting bitbake variable STAGING_DIR_NATIVE from kconfig-frontends-native
-2026-03-21 22:42:27,032 - [DEBUG] Bitbake parsing recipes
-2026-03-21 22:42:52,921 - [DEBUG] PATH=/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/perl-native:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/bzip2-native:/work/yocto/sources/poky/scripts:/work/yocto/sources/poky/bitbake/bin:/work/yocto/sources/meta-xilinx/meta-xilinx-core/gen-machine-conf:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-2026-03-21 22:42:52,921 - [DEBUG] checking for machine versal-generic-xcve2302
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/workspace/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-edf/oe-core/meta/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/meta-poky/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/meta-rauc/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/meta/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-oe/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-python/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-filesystems/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-networking/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-multimedia/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-virtualization/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-security/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-security/meta-tpm/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-core/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-standalone/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-standalone-sdt/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-multimedia/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-demos/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-virtualization/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-mali400/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-gpu-malig78ae/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-microblaze/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx-tsn/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openamp/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-edf/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-kria/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-adaptive-socs/meta-amd-adaptive-socs-core/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-adaptive-socs/meta-amd-adaptive-socs-bsp/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-imgrcvry/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-arm/meta-arm/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-arm/meta-arm-toolchain/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-jupyter/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-ros/meta-ros-common/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-ros/meta-ros2/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-ros/meta-ros2-jazzy/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-qt5/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/poky/../meta-vitis/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [DEBUG]   checking /work/yocto/sources/meta-vd100/conf/machine/versal-generic-xcve2302.conf
-2026-03-21 22:42:52,921 - [WARNING] A machine versal-generic-xcve2302 was found in /work/yocto/sources/meta-vd100/conf/machine/versal-generic-xcve2302.conf, this may conflict with the machine you specified.  It is recommended to use a different name for your machine.
-2026-03-21 22:42:52,921 - [INFO] Getting Platform info from HW file
-2026-03-21 22:42:52,921 - [DEBUG] Using the machine specified by user:versal-generic-xcve2302
-2026-03-21 22:42:52,921 - [DEBUG] Using the soc_family specified by user:versal
-2026-03-21 22:42:52,921 - [DEBUG] Getting bitbake variable STAGING_DIR_NATIVE from esw-conf-native
-2026-03-21 22:42:52,982 - [DEBUG] PATH=/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/bin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/sbin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/sbin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/perl-native:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/bzip2-native:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/perl-native:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/bzip2-native:/work/yocto/sources/poky/scripts:/work/yocto/sources/poky/bitbake/bin:/work/yocto/sources/meta-xilinx/meta-xilinx-core/gen-machine-conf:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-2026-03-21 22:42:52,982 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-machine-name.dts /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts 
-2026-03-21 22:42:55,134 - [DEBUG] 
+2026-03-23 17:32:44,480 - [DEBUG] Getting bitbake variable STAGING_DIR_NATIVE from kconfig-frontends-native
+2026-03-23 17:32:44,480 - [DEBUG] Bitbake parsing recipes
+2026-03-23 17:33:08,366 - [DEBUG] PATH=/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/perl-native:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/bzip2-native:/work/yocto/sources/poky/scripts:/work/yocto/sources/poky/bitbake/bin:/work/yocto/sources/meta-xilinx/meta-xilinx-core/gen-machine-conf:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-03-23 17:33:08,366 - [DEBUG] checking for machine versal-generic-xcve2302
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/workspace/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-edf/oe-core/meta/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/meta-poky/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/meta-rauc/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/meta/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-oe/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-python/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-filesystems/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-networking/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openembedded/meta-multimedia/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-virtualization/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-security/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-security/meta-tpm/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-core/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-standalone/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-standalone-sdt/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-multimedia/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-demos/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-virtualization/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-mali400/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-gpu-malig78ae/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-microblaze/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx-tsn/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-openamp/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-edf/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-kria/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-adaptive-socs/meta-amd-adaptive-socs-core/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-amd-adaptive-socs/meta-amd-adaptive-socs-bsp/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-xilinx/meta-xilinx-imgrcvry/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-arm/meta-arm/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-arm/meta-arm-toolchain/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-jupyter/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-ros/meta-ros-common/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-ros/meta-ros2/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-ros/meta-ros2-jazzy/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,366 - [DEBUG]   checking /work/yocto/sources/poky/../meta-qt5/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,367 - [DEBUG]   checking /work/yocto/sources/poky/../meta-vitis/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,367 - [DEBUG]   checking /work/yocto/sources/meta-vd100_v2/conf/machine/versal-generic-xcve2302.conf
+2026-03-23 17:33:08,367 - [WARNING] A machine versal-generic-xcve2302 was found in /work/yocto/sources/meta-vd100_v2/conf/machine/versal-generic-xcve2302.conf, this may conflict with the machine you specified.  It is recommended to use a different name for your machine.
+2026-03-23 17:33:08,367 - [INFO] Getting Platform info from HW file
+2026-03-23 17:33:08,367 - [DEBUG] Using the machine specified by user:versal-generic-xcve2302
+2026-03-23 17:33:08,367 - [DEBUG] Using the soc_family specified by user:versal
+2026-03-23 17:33:08,367 - [DEBUG] Getting bitbake variable STAGING_DIR_NATIVE from esw-conf-native
+2026-03-23 17:33:08,434 - [DEBUG] PATH=/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/bin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/sbin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/sbin:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/perl-native:/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/bzip2-native:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/bin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/sbin:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/perl-native:/work/yocto/tmp/work/x86_64-linux/kconfig-frontends-native/4.11.0.1/recipe-sysroot-native/usr/bin/bzip2-native:/work/yocto/sources/poky/scripts:/work/yocto/sources/poky/bitbake/bin:/work/yocto/sources/meta-xilinx/meta-xilinx-core/gen-machine-conf:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-03-23 17:33:08,435 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-machine-name.dts /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts 
+2026-03-23 17:33:10,465 - [DEBUG] 
 xlnx-versal xcve2302 Xilinx Versal
 
 
 
-2026-03-21 22:42:55,134 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-xilinx-id-cpus.dts /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts 
-2026-03-21 22:42:57,838 - [DEBUG] 
+2026-03-23 17:33:10,465 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-xilinx-id-cpus.dts /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts 
+2026-03-23 17:33:12,964 - [DEBUG] 
 # global core_number no-domain cpu_name
 arm,cortex-a72 0 None psv_cortexa72_0 None
 arm,cortex-a72 1 None psv_cortexa72_1 None
@@ -65,22 +65,22 @@ arm,cortex-r5 1 None psv_cortexr5_1 None
 
 
 
-2026-03-21 22:42:57,843 - [DEBUG] Hardware Configuration:
-2026-03-21 22:42:57,843 - [DEBUG] MODEL       = "Xilinx Versal"
-2026-03-21 22:42:57,843 - [DEBUG] MACHINE     = "versal-generic-xcve2302"
-2026-03-21 22:42:57,843 - [DEBUG] DEVICE_ID   = "xcve2302"
-2026-03-21 22:42:57,843 - [DEBUG] SOC_FAMILY  = "versal"
-2026-03-21 22:42:57,843 - [DEBUG] SOC_VARIANT = "ai-edge"
-2026-03-21 22:42:57,843 - [DEBUG] CPUs:
-2026-03-21 22:42:57,843 - [DEBUG] 	= psv_cortexa72_0 arm cortex-a72 0
-2026-03-21 22:42:57,843 - [DEBUG] 	= psv_cortexa72_1 arm cortex-a72 1
-2026-03-21 22:42:57,843 - [DEBUG] 	= psv_pmc_0 versal-plm 0
-2026-03-21 22:42:57,843 - [DEBUG] 	= psv_psm_0 versal-psm 1
-2026-03-21 22:42:57,843 - [DEBUG] 	= psv_cortexr5_0 arm cortex-r5 0
-2026-03-21 22:42:57,843 - [DEBUG] 	= psv_cortexr5_1 arm cortex-r5 1
-2026-03-21 22:42:57,844 - [INFO] Silentconfig project
-2026-03-21 22:42:57,844 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/work/yocto/sources/meta-vd100_v2/conf/machine/config conf /work/yocto/sources/meta-vd100_v2/conf/machine/configs/Kconfig
-2026-03-21 22:42:57,847 - [DEBUG] *
+2026-03-23 17:33:12,968 - [DEBUG] Hardware Configuration:
+2026-03-23 17:33:12,968 - [DEBUG] MODEL       = "Xilinx Versal"
+2026-03-23 17:33:12,968 - [DEBUG] MACHINE     = "versal-generic-xcve2302"
+2026-03-23 17:33:12,968 - [DEBUG] DEVICE_ID   = "xcve2302"
+2026-03-23 17:33:12,968 - [DEBUG] SOC_FAMILY  = "versal"
+2026-03-23 17:33:12,968 - [DEBUG] SOC_VARIANT = "ai-edge"
+2026-03-23 17:33:12,968 - [DEBUG] CPUs:
+2026-03-23 17:33:12,968 - [DEBUG] 	= psv_cortexa72_0 arm cortex-a72 0
+2026-03-23 17:33:12,968 - [DEBUG] 	= psv_cortexa72_1 arm cortex-a72 1
+2026-03-23 17:33:12,968 - [DEBUG] 	= psv_pmc_0 versal-plm 0
+2026-03-23 17:33:12,968 - [DEBUG] 	= psv_psm_0 versal-psm 1
+2026-03-23 17:33:12,968 - [DEBUG] 	= psv_cortexr5_0 arm cortex-r5 0
+2026-03-23 17:33:12,968 - [DEBUG] 	= psv_cortexr5_1 arm cortex-r5 1
+2026-03-23 17:33:12,969 - [INFO] Silentconfig project
+2026-03-23 17:33:12,969 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/work/yocto/sources/meta-vd100_v2/conf/machine/config conf /work/yocto/sources/meta-vd100_v2/conf/machine/configs/Kconfig
+2026-03-23 17:33:12,971 - [DEBUG] *
 * System Configuration
 *
 VERSAL Configuration (SYSTEM_VERSAL) [Y/?] y
@@ -233,28 +233,28 @@ Domain file Path (YOCTO_MC_DOMAIN_FILEPATH) []
 #
 # configuration written to /work/yocto/sources/meta-vd100_v2/conf/machine/config
 #
-2026-03-21 22:42:57,880 - [INFO] Generating configuration files
-2026-03-21 22:42:57,881 - [INFO] Generating cortex-a72 Linux configuration [ None ]
-2026-03-21 22:42:57,881 - [DEBUG] No domain for cpu psv_cortexa72_0 in any domain files
-2026-03-21 22:42:57,881 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper --enhanced -O /work/yocto/sources/meta-vd100_v2/conf/machine -f /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/system-top-no-pl.dts -- xlnx_overlay_pl_dt cortexa72-versal full /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/pl.dtsi
-2026-03-21 22:43:00,397 - [DEBUG] 
+2026-03-23 17:33:13,003 - [INFO] Generating configuration files
+2026-03-23 17:33:13,003 - [INFO] Generating cortex-a72 Linux configuration [ None ]
+2026-03-23 17:33:13,003 - [DEBUG] No domain for cpu psv_cortexa72_0 in any domain files
+2026-03-23 17:33:13,003 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper --enhanced -O /work/yocto/sources/meta-vd100_v2/conf/machine -f /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/system-top-no-pl.dts -- xlnx_overlay_pl_dt cortexa72-versal full /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/pl.dtsi
+2026-03-23 17:33:15,297 - [DEBUG] 
 Processor: cortexa72-versal, Config: full, Input: /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/pl.dtsi
 Starting overlay generation...
 Overlay generation completed successfully!
 
 
 
-2026-03-21 22:43:00,397 - [INFO] pl-overlay [ full ] is enabled for cortex-a72 file: /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts and stored in intermediate ps dts file: /work/yocto/build/conf/dts/versal-generic-xcve2302/system-top-no-pl.dts
-2026-03-21 22:43:00,397 - [INFO] Lopper generated pl overlay file is found in: /work/yocto/sources/meta-vd100_v2/conf/machine/pl.dtsi and a copy of pl.dtsi is stored in: /work/yocto/build/conf/dts/versal-generic-xcve2302/pl-overlay-full
-2026-03-21 22:43:00,398 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper --enhanced -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-a72-imux.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/system-top-no-pl.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/cortexa72-linux.dts -- gen_domain_dts psv_cortexa72_0 linux_dt
-2026-03-21 22:43:03,566 - [DEBUG] 
+2026-03-23 17:33:15,297 - [INFO] pl-overlay [ full ] is enabled for cortex-a72 file: /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts and stored in intermediate ps dts file: /work/yocto/build/conf/dts/versal-generic-xcve2302/system-top-no-pl.dts
+2026-03-23 17:33:15,297 - [INFO] Lopper generated pl overlay file is found in: /work/yocto/sources/meta-vd100_v2/conf/machine/pl.dtsi and a copy of pl.dtsi is stored in: /work/yocto/build/conf/dts/versal-generic-xcve2302/pl-overlay-full
+2026-03-23 17:33:15,297 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper --enhanced -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-a72-imux.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/system-top-no-pl.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/cortexa72-linux.dts -- gen_domain_dts psv_cortexa72_0 linux_dt
+2026-03-23 17:33:18,086 - [DEBUG] 
 
 
 
-2026-03-21 22:43:03,566 - [INFO] Generating microblaze baremetal configuration for versal PMC (PLM)
-2026-03-21 22:43:03,566 - [INFO] Generating microblaze processor tunes
-2026-03-21 22:43:03,566 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-microblaze-yocto.dts /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts 
-2026-03-21 22:43:09,125 - [DEBUG] 
+2026-03-23 17:33:18,086 - [INFO] Generating microblaze baremetal configuration for versal PMC (PLM)
+2026-03-23 17:33:18,086 - [INFO] Generating microblaze processor tunes
+2026-03-23 17:33:18,086 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   -i /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/lib/python3.12/site-packages/lopper/lops/lop-microblaze-yocto.dts /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts 
+2026-03-23 17:33:23,068 - [DEBUG] 
 # /cpus_microblaze@0/cpu@0
 #   compatible = "pmc-microblaze";
 AVAILTUNES += "microblaze-pmc"
@@ -270,39 +270,29 @@ PACKAGE_EXTRA_ARCHS:tune-microblaze-psm = "${TUNE_PKGARCH}"
 
 
 
-2026-03-21 22:43:09,125 - [DEBUG] No domain for cpu psv_pmc_0 in any domain files
-2026-03-21 22:43:09,125 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/versal-generic-xcve2302-microblaze-pmc.dts -- gen_domain_dts psv_pmc_0
-2026-03-21 22:43:11,147 - [DEBUG] 
+2026-03-23 17:33:23,069 - [DEBUG] No domain for cpu psv_pmc_0 in any domain files
+2026-03-23 17:33:23,069 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/versal-generic-xcve2302-microblaze-pmc.dts -- gen_domain_dts psv_pmc_0
+2026-03-23 17:33:24,857 - [DEBUG] 
 
 
 
-2026-03-21 22:43:11,147 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f                  "/work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts" -- baremetaldrvlist_xlnx psv_pmc_0 "/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/share/embeddedsw"
-2026-03-21 22:43:12,953 - [DEBUG] 
+2026-03-23 17:33:24,857 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f                  "/work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts" -- baremetaldrvlist_xlnx psv_pmc_0 "/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/share/embeddedsw"
+2026-03-23 17:33:26,499 - [DEBUG] 
 
 
 
-2026-03-21 22:43:12,954 - [INFO] Generating microblaze baremetal configuration for Versal PSM
-2026-03-21 22:43:12,954 - [DEBUG] No domain for cpu psv_psm_0 in any domain files
-2026-03-21 22:43:12,954 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/versal-generic-xcve2302-microblaze-psm.dts -- gen_domain_dts psv_psm_0
-2026-03-21 22:43:15,067 - [DEBUG] 
+2026-03-23 17:33:26,499 - [INFO] Generating microblaze baremetal configuration for Versal PSM
+2026-03-23 17:33:26,499 - [DEBUG] No domain for cpu psv_psm_0 in any domain files
+2026-03-23 17:33:26,499 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f --enhanced   /work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts /work/yocto/build/conf/dts/versal-generic-xcve2302/versal-generic-xcve2302-microblaze-psm.dts -- gen_domain_dts psv_psm_0
+2026-03-23 17:33:28,358 - [DEBUG] 
 
 
 
-2026-03-21 22:43:15,067 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f                  "/work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts" -- baremetaldrvlist_xlnx psv_psm_0 "/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/share/embeddedsw"
-2026-03-21 22:43:16,896 - [DEBUG] 
+2026-03-23 17:33:28,359 - [DEBUG] LOPPER_DTC_FLAGS="-b 0 -@" /work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/bin/lopper -O /work/yocto/sources/meta-vd100_v2/conf/machine -f                  "/work/yocto/.hw-description/work/ledblink/software/vd100_sdt/system-top.dts" -- baremetaldrvlist_xlnx psv_psm_0 "/work/yocto/tmp/work/x86_64-linux/esw-conf-native/2025.2+git/recipe-sysroot-native/usr/share/embeddedsw"
+2026-03-23 17:33:30,006 - [DEBUG] 
 
 
 
-2026-03-21 22:43:16,909 - [INFO] Generating machine conf file
-2026-03-21 22:43:16,910 - [NOTE] Configuration for local.conf written to /work/yocto/build/conf/local.conf
-2026-03-21 22:43:16,910 - [DEBUG] # Use the newly generated MACHINE
-MACHINE = "versal-generic-xcve2302"
-
-# Avoid errors in some baremetal configs as these layers may be present
-# but are not used.  Note the following lines are optional and can be
-# safetly disabled.
-SKIP_META_VIRT_SANITY_CHECK = "1"
-SKIP_META_SECURITY_SANITY_CHECK = "1"
-SKIP_META_TPM_SANITY_CHECK = "1"
-
-2026-03-21 22:43:16,910 - [DEBUG] Shutting down bitbake
+2026-03-23 17:33:30,019 - [INFO] Generating machine conf file
+2026-03-23 17:33:30,019 - [ERROR] Unable to find a pdi file in /work/yocto/.hw-description/work/ledblink/software/vd100_sdt,                         use the -p/--pl option to point to the directory containing a .pdi file
+2026-03-23 17:33:30,019 - [DEBUG] Shutting down bitbake

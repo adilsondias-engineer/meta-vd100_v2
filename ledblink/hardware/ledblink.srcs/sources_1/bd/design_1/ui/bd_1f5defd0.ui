@@ -1,44 +1,46 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-202,22",
+   "Default View_ScaleFactor":"0.877491",
+   "Default View_TopLeft":"-97,-109",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR4 -pg 1 -lvl 5 -x 1340 -y 210 -defaultsOSRD
-preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
-preplace port port-id_led -pg 1 -lvl 5 -x 1340 -y 480 -defaultsOSRD
-preplace port port-id_rst_n -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
-preplace inst versal_cips_0 -pg 1 -lvl 2 -x 430 -y 220 -defaultsOSRD
-preplace inst axi_noc_0 -pg 1 -lvl 3 -x 920 -y 210 -defaultsOSRD
-preplace inst rst_versal_cips_0_100M -pg 1 -lvl 2 -x 430 -y 550 -defaultsOSRD
-preplace inst ilconstant_0 -pg 1 -lvl 1 -x 100 -y 590 -defaultsOSRD
-preplace inst MyLEDIP_0 -pg 1 -lvl 4 -x 1210 -y 480 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 920 -y 470 -defaultsOSRD
-preplace netloc MyLEDIP_0_pl_led 1 4 1 N 480
-preplace netloc ilconstant_0_dout 1 1 1 NJ 590
-preplace netloc rst_n_1 1 0 2 NJ 530 180J
-preplace netloc rst_versal_cips_0_100M_peripheral_aresetn 1 2 2 750 550 1100J
-preplace netloc versal_cips_0_fpd_cci_noc_axi0_clk 1 2 1 680 220n
-preplace netloc versal_cips_0_fpd_cci_noc_axi1_clk 1 2 1 690 240n
-preplace netloc versal_cips_0_fpd_cci_noc_axi2_clk 1 2 1 700 260n
-preplace netloc versal_cips_0_fpd_cci_noc_axi3_clk 1 2 1 720 280n
-preplace netloc versal_cips_0_lpd_axi_noc_clk 1 2 1 740 300n
-preplace netloc versal_cips_0_pl0_ref_clk 1 1 3 190 660 670 560 1090
-preplace netloc versal_cips_0_pl0_resetn 1 1 2 200 440 660
-preplace netloc versal_cips_0_pmc_axi_noc_axi0_clk 1 2 1 750 320n
-preplace netloc axi_noc_0_CH0_DDR4_0 1 3 2 NJ 210 NJ
-preplace netloc axi_smc_M00_AXI 1 3 1 1090 460n
-preplace netloc sys_clk0_0_1 1 0 3 NJ 650 NJ 650 710J
-preplace netloc versal_cips_0_FPD_CCI_NOC_0 1 2 1 N 80
-preplace netloc versal_cips_0_FPD_CCI_NOC_1 1 2 1 N 100
-preplace netloc versal_cips_0_FPD_CCI_NOC_2 1 2 1 N 120
-preplace netloc versal_cips_0_FPD_CCI_NOC_3 1 2 1 N 140
-preplace netloc versal_cips_0_LPD_AXI_NOC_0 1 2 1 N 160
-preplace netloc versal_cips_0_M_AXI_FPD 1 2 1 730 60n
-preplace netloc versal_cips_0_PMC_NOC_AXI_0 1 2 1 N 180
-levelinfo -pg 1 0 100 430 920 1210 1340
-pagesize -pg 1 -db -bbox -sgen -100 0 1430 670
+preplace port DDR4 -pg 1 -lvl 5 -x 1520 -y 200 -defaultsOSRD
+preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port port-id_led -pg 1 -lvl 5 -x 1520 -y 560 -defaultsOSRD
+preplace port port-id_rst_n -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace inst versal_cips_0 -pg 1 -lvl 2 -x 570 -y 230 -defaultsOSRD
+preplace inst axi_noc_0 -pg 1 -lvl 4 -x 1330 -y 200 -defaultsOSRD
+preplace inst rst_versal_cips_0_100M -pg 1 -lvl 2 -x 570 -y 580 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 1 -x 170 -y 620 -defaultsOSRD
+preplace inst MyLEDIP_0 -pg 1 -lvl 4 -x 1330 -y 560 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 970 -y 540 -defaultsOSRD
+preplace inst ilvector_logic_0 -pg 1 -lvl 1 -x 170 -y 240 -defaultsOSRD
+preplace netloc MyLEDIP_0_pl_led 1 4 1 NJ 560
+preplace netloc ilconstant_0_dout 1 1 1 NJ 620
+preplace netloc rst_n_1 1 0 2 20 560 320J
+preplace netloc rst_versal_cips_0_100M_peripheral_aresetn 1 2 2 830 620 1160J
+preplace netloc versal_cips_0_fpd_cci_noc_axi0_clk 1 2 2 NJ 280 1110
+preplace netloc versal_cips_0_fpd_cci_noc_axi1_clk 1 2 2 NJ 300 1120
+preplace netloc versal_cips_0_fpd_cci_noc_axi2_clk 1 2 2 NJ 320 1130
+preplace netloc versal_cips_0_fpd_cci_noc_axi3_clk 1 2 2 NJ 340 1140
+preplace netloc versal_cips_0_lpd_axi_noc_clk 1 2 2 NJ 360 1150
+preplace netloc versal_cips_0_pl0_resetn 1 1 2 340 470 800
+preplace netloc versal_cips_0_pl1_ref_clk 1 1 3 330 480 810 630 1110J
+preplace netloc versal_cips_0_pmc_axi_noc_axi0_clk 1 2 2 NJ 380 1160
+preplace netloc ilvector_logic_0_Res 1 1 1 NJ 240
+preplace netloc axi_noc_0_CH0_DDR4_0 1 4 1 NJ 200
+preplace netloc axi_smc_M00_AXI 1 3 1 N 540
+preplace netloc sys_clk0_0_1 1 0 4 NJ 460 NJ 460 820J 200 NJ
+preplace netloc versal_cips_0_FPD_CCI_NOC_0 1 2 2 NJ 80 N
+preplace netloc versal_cips_0_FPD_CCI_NOC_1 1 2 2 NJ 100 N
+preplace netloc versal_cips_0_FPD_CCI_NOC_2 1 2 2 NJ 120 N
+preplace netloc versal_cips_0_FPD_CCI_NOC_3 1 2 2 NJ 140 N
+preplace netloc versal_cips_0_LPD_AXI_NOC_0 1 2 2 NJ 160 N
+preplace netloc versal_cips_0_M_AXI_FPD 1 2 1 830 60n
+preplace netloc versal_cips_0_PMC_NOC_AXI_0 1 2 2 NJ 180 N
+levelinfo -pg 1 0 170 570 970 1330 1520
+pagesize -pg 1 -db -bbox -sgen -100 0 1610 680
 "
 }
 {
@@ -46,5 +48,5 @@ pagesize -pg 1 -db -bbox -sgen -100 0 1430 670
    "da_axi_noc_cnt":"1",
    "da_board_cnt":"14",
    "da_cips_cnt":"1",
-   "da_clkrst_cnt":"13"
+   "da_clkrst_cnt":"14"
 }

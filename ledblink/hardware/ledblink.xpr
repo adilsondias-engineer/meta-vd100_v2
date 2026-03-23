@@ -71,13 +71,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="6"/>
-    <Option Name="WTModelSimExportSim" Val="6"/>
-    <Option Name="WTQuestaExportSim" Val="6"/>
+    <Option Name="WTXSimExportSim" Val="7"/>
+    <Option Name="WTModelSimExportSim" Val="7"/>
+    <Option Name="WTQuestaExportSim" Val="7"/>
     <Option Name="WTIesExportSim" Val="0"/>
     <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="6"/>
-    <Option Name="WTActivehdlExportSim" Val="6"/>
+    <Option Name="WTRivieraExportSim" Val="7"/>
+    <Option Name="WTActivehdlExportSim" Val="7"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -116,9 +116,6 @@
         </FileInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip\design_1_MyLEDIP_0_4\design_1_MyLEDIP_0_4.xci">
           <Proxy FileSetName="design_1_MyLEDIP_0_4"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip\design_1_rst_versal_cips_0_100M_0\design_1_rst_versal_cips_0_100M_0.xci">
-          <Proxy FileSetName="design_1_rst_versal_cips_0_100M_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
@@ -192,12 +189,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_rst_versal_cips_0_100M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_rst_versal_cips_0_100M_0" RelGenDir="$PGENDIR/design_1_rst_versal_cips_0_100M_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_rst_versal_cips_0_100M_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_1_MyLEDIP_0_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_MyLEDIP_0_4" RelGenDir="$PGENDIR/design_1_MyLEDIP_0_4">
       <Config>
         <Option Name="TopModule" Val="design_1_MyLEDIP_0_4"/>
@@ -234,21 +225,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_rst_versal_cips_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_rst_versal_cips_0_100M_0" Part="xcve2302-sfva784-1LP-e-S" ConstrsSet="design_1_rst_versal_cips_0_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_rst_versal_cips_0_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_rst_versal_cips_0_100M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_rst_versal_cips_0_100M_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="design_1_MyLEDIP_0_4_synth_1" Type="Ft3:Synth" SrcSet="design_1_MyLEDIP_0_4" Part="xcve2302-sfva784-1LP-e-S" ConstrsSet="design_1_MyLEDIP_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_MyLEDIP_0_4_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_MyLEDIP_0_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_MyLEDIP_0_4_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -274,28 +253,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_rst_versal_cips_0_100M_0_impl_1" Type="Ft8:AdvanceImpl" Part="xcve2302-sfva784-1LP-e-S" ConstrsSet="design_1_rst_versal_cips_0_100M_0" Description="Default settings for Advanced Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_rst_versal_cips_0_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_rst_versal_cips_0_100M_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_rst_versal_cips_0_100M_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Advanced Implementation Defaults" Flow="Vivado Advanced Implementation 2025"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_device_image"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Advanced Implementation Default Reports" Flow="Vivado Advanced Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="design_1_MyLEDIP_0_4_impl_1" Type="Ft8:AdvanceImpl" Part="xcve2302-sfva784-1LP-e-S" ConstrsSet="design_1_MyLEDIP_0_4" Description="Default settings for Advanced Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_MyLEDIP_0_4_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_MyLEDIP_0_4_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_MyLEDIP_0_4_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Advanced Implementation Defaults" Flow="Vivado Advanced Implementation 2025">
-          <Desc>Default settings for Advanced Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Advanced Implementation Defaults" Flow="Vivado Advanced Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

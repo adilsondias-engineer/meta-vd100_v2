@@ -6,14 +6,12 @@
 
 &amba {
 	MyLEDIP_0: MyLEDIP@a4000000 {
-		xlnx,s00-axi-data-width = <32>;
 		compatible = "xlnx,MyLEDIP-1.0";
 		clock-names = "s00_axi_aclk";
-		xlnx,s00-axi-addr-width = <4>;
 		xlnx,ip-name = "MyLEDIP";
 		xlnx,edk-iptype = "PERIPHERAL";
-		reg = <0x0 0xa4000000 0x0 0x10000>;
-		clocks = <&versal_clk 65>;
+		reg = <0x0 0xa4000000 0x0 0x1000>;
+		clocks = <&versal_clk 66>;
 		xlnx,name = "MyLEDIP_0";
 	};
 };
