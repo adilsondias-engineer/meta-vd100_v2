@@ -13,4 +13,8 @@ EOF
 cat > ${D}${sysconfdir}/hostname << 'EOF'
 vd100
 EOF
+cat > ${D}${sysconfdir}/motd << 'EOF'
+Welcome to VD100 Linux 1.0!!
+By Adilson Dias
+EOF
 }
