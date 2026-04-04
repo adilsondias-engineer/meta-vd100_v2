@@ -18,7 +18,7 @@ Vivado 2025.2
             └─ Yocto Scarthgap + meta-vd100_v2
                 └─ VD100 Linux 1.0
                     ├─ PLM → U-Boot → systemd-boot → Linux
-                    ├─ myledip.ko → /dev/myledip (AXI-lite @ 0xA4000000)
+                    ├─ myledip.ko → /dev/plledip (AXI-lite @ 0xA4000000)
                     │   ├─ pl_ps_irq[0] → PL reset detection (GIC SPI 84)
                     │   ├─ PS_KEY IRQ → LED toggle (LPD MIO24)
                     │   ├─ PS_LED mirror (LPD MIO25)
@@ -120,13 +120,13 @@ Devices are accessible to the `pldev` group without `sudo`:
 
 ```bash
 # /dev/myledip — PL LED control
-echo 1 | tee /dev/myledip    # ON
-echo 0 | tee /dev/myledip    # OFF
-cat /dev/myledip              # read state
+echo 1 | tee /dev/plledip    # ON
+echo 0 | tee /dev/plledip    # OFF
+cat /dev/plledip              # read state
 
 # sysfs
-cat /sys/class/myledip/myledip0/pl_led_state
-echo 1 > /sys/class/myledip/myledip0/pl_led_state
+cat /sys/class/myledip/plledip0/pl_led_state
+echo 1 > /sys/class/plledip/plledip0/pl_led_state
 ```
 
 Group membership is set in `vd100.conf` via `EXTRA_USERS_PARAMS` — single location
