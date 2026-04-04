@@ -39,3 +39,7 @@
 
 # debug information files
 *.dwo
+*.cmd
+yocto/meta-vd100_v2/recipes-modules/vd100-pl-led-ip/files/Module.symvers
+yocto/meta-vd100_v2/recipes-modules/vd100-pl-led-ip/files/modules.order
+*.ko
